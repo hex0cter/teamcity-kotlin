@@ -29,11 +29,6 @@ project {
     id("HelloWorld")
     name = "Hello world"
     steps {
-        exec {
-            name = "Set proper vars"
-            path = "./buildscripts/set_vars.sh"
-            arguments = "kiwi-node-backend source/node-backend %system.teamcity.build.checkoutDir%"
-        }
     }
   }
 }
