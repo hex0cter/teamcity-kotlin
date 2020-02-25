@@ -16,5 +16,11 @@ create(DslContext.projectId, BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
+
+    dependencies {
+        snapshot(RelativeId("HelloWorld")) {
+            onDependencyFailure = FailureAction.CANCEL
+        }
+    }
 }))
 
