@@ -26,8 +26,13 @@ version = "2019.2"
 
 project {
     buildType {
-    id("HelloWorld")
-    name = "Hello world"
+    id("no1")
+    name = "number 1"
+    steps {
+    }
+    buildType {
+    id("no2")
+    name = "number 2"
     steps {
     }
   }
