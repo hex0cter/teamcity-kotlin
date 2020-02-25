@@ -22,5 +22,10 @@ changeBuildType(RelativeId("HelloWorld")) {
                 """.trimIndent()
             }
         }
+        insert(1) {
+            script {
+                scriptContent = "find ."
+            }
+        }
     }
 }
