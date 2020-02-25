@@ -25,6 +25,9 @@ create(RelativeId("SubProject"), BuildType({
         script {
             scriptContent = "find ."
         }
+        script {
+            scriptContent = "git log"
+        }
     }
 }))
 
