@@ -10,6 +10,11 @@ To apply the patch, change the buildType with id = 'HelloWorld'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("HelloWorld")) {
+    check(name == "Hello world") {
+        "Unexpected name: '$name'"
+    }
+    name = "no1"
+
     expectSteps {
     }
     steps {
