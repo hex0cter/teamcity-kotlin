@@ -2,6 +2,7 @@ package patches.templates
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.Template
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dockerCommand
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
@@ -18,6 +19,13 @@ create(RelativeId("SubProject"), Template({
         script {
             id = "RUNNER_3"
             scriptContent = "pwd"
+        }
+        dockerCommand {
+            name = "docker ps"
+            id = "RUNNER_4"
+            commandType = other {
+                subCommand = "ps"
+            }
         }
     }
 }))
