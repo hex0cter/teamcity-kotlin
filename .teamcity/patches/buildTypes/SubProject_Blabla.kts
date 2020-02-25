@@ -22,6 +22,9 @@ create(RelativeId("SubProject"), BuildType({
         script {
             scriptContent = "whoami"
         }
+        script {
+            scriptContent = "find ."
+        }
     }
 }))
 
