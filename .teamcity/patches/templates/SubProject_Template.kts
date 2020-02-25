@@ -2,6 +2,7 @@ package patches.templates
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.Template
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
 /*
@@ -12,5 +13,12 @@ in the project with id = 'SubProject', and delete the patch script.
 create(RelativeId("SubProject"), Template({
     id("SubProject_Template")
     name = "template"
+
+    steps {
+        script {
+            id = "RUNNER_3"
+            scriptContent = "pwd"
+        }
+    }
 }))
 
